@@ -16,7 +16,6 @@
 |:---:|:---:|:---:|
 | Selects stable dual pseudo masks without a manually chosen response threshold | Calibrates ambiguous pixels with feature and image-appearance prototypes | Each dataset script performs training and then automatically evaluates the saved checkpoint |
 
-- ✅ Only the proposed AutoGazeSeg method is included.
 - ✅ Kvasir-SEG, NCI-ISBI, ISIC, and BraTS 2019 are supported.
 - ✅ Earlier AutoGazeSeg-compatible checkpoints load without state-dictionary conversion.
 - ✅ Data paths, output paths, devices, seeds, and paper hyperparameters are configurable.
