@@ -97,16 +97,7 @@ $$
 
 ![Prototype-Guided Pseudo-Mask Calibration](assets/ppc_calibration.png)
 
-## 🔒 Anonymous Release
 
-This package contains only the implementation required for the proposed method:
-
-- no comparison-method source code;
-- no author, affiliation, contact, or account information;
-- no external badges, download URLs, or website references;
-- no repository history or private experiment paths.
-
-The four figures in `assets/` are local PNG files with identity-bearing metadata removed.
 
 ## 🗂️ Repository Scope
 
@@ -344,17 +335,7 @@ Values are reported as mean ± standard deviation over three independent runs.
 | FGI | Gaze | 77.98 ± 2.26 | 64.95 ± 3.08 | 20.02 ± 0.79 |
 | **AutoGazeSeg** | **Gaze** | **86.17 ± 0.26** | **76.83 ± 0.44** | **12.10 ± 0.54** |
 
-### 🧪 Component Ablation
 
-| Variant | Kvasir-SEG Dice (%) | NCI-ISBI Dice (%) |
-|---|---:|---:|
-| CRF | 41.17 ± 0.10 | 32.56 ± 0.15 |
-| Single-SAM at ℓ = 0.35 | 81.38 ± 0.36 | 78.29 ± 0.73 |
-| Automatic pseudo-mask generation | 84.50 ± 0.76 | 80.47 ± 0.86 |
-| Generation + feature prototype | 85.56 ± 0.05 | 81.46 ± 0.34 |
-| Generation + image prototype | 85.67 ± 0.25 | 81.52 ± 0.24 |
-| Generation + prototype calibration | 86.01 ± 0.18 | 81.70 ± 0.11 |
-| **Full model** | **86.94 ± 0.09** | **82.31 ± 0.10** |
 
 ### 🖼️ Qualitative Comparison
 
