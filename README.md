@@ -78,7 +78,7 @@ $$
 Cross-branch calibration exchanges these soft masks:
 
 $$
-\mathcal{L}_{\mathrm{PPC}}=\mathcal{L}_{\mathrm{wbd}}\!\left(P_1,S_2\right)+\mathcal{L}_{\mathrm{wbd}}\!\left(P_2,S_1\right).
+\mathcal{L}_{\mathrm{PPC}}=\mathcal{L}_{\mathrm{wbd}}\left(P_1,S_2\right)+\mathcal{L}_{\mathrm{wbd}}\left(P_2,S_1\right).
 $$
 
 The complete training objective is:
@@ -110,7 +110,7 @@ Each entry script trains one dataset and then evaluates its saved checkpoint.
 | 🔬 ISIC | Dermoscopic images | `train_test_isic.sh` |
 | 🧠 BraTS 2019 | Brain MR images | `train_test_brats2019.sh` |
 
-Pseudo-mask generation and text-description encoding are separate preparation stages. The training code expects the dual pseudo masks and text embeddings to be available before launch.
+
 
 ## ⚙️ Installation
 
@@ -283,7 +283,6 @@ outputs/
 
 ## 📈 Results
 
-Values are reported as mean ± standard deviation over three independent runs.
 
 ### 🩺 Kvasir-SEG and NCI-ISBI
 
