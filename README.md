@@ -46,11 +46,7 @@ Target-aware text embeddings are injected into two U-Net branches through cross-
 The direct supervision objective is:
 
 $$
-\mathcal{L}_{\mathrm{SUP}}
-=
-\mathcal{L}_{\mathrm{wbd}}\!\left(P_1, M_{\mathrm{high}}\right)
-+
-\mathcal{L}_{\mathrm{wbd}}\!\left(P_2, M_{\mathrm{low}}\right),
+\mathcal{L}_{\mathrm{SUP}} = \mathcal{L}_{\mathrm{wbd}}\left(P_1, M_{\mathrm{high}}\right) + \mathcal{L}_{\mathrm{wbd}}\left(P_2, M_{\mathrm{low}}\right),
 $$
 
 where $\mathcal{L}_{\mathrm{wbd}}$ denotes weighted BCE-Dice loss.
@@ -70,13 +66,7 @@ $$
 Feature prototypes and image-appearance prototypes estimate the foreground probability of each uncertain pixel:
 
 $$
-a_m
-=
-\left(1-\alpha\right)a_m^{F}
-+
-\alpha a^{I},
-\qquad
-\alpha=0.25.
+a_m=\left(1-\alpha\right)a_m^{F}+\alpha a^{I},\qquad\alpha=0.25.
 $$
 
 The calibrated soft pseudo mask for branch $m$ is:
@@ -88,23 +78,13 @@ $$
 Cross-branch calibration exchanges these soft masks:
 
 $$
-\mathcal{L}_{\mathrm{PPC}}
-=
-\mathcal{L}_{\mathrm{wbd}}\!\left(P_1,S_2\right)
-+
-\mathcal{L}_{\mathrm{wbd}}\!\left(P_2,S_1\right).
+\mathcal{L}_{\mathrm{PPC}}=\mathcal{L}_{\mathrm{wbd}}\!\left(P_1,S_2\right)+\mathcal{L}_{\mathrm{wbd}}\!\left(P_2,S_1\right).
 $$
 
 The complete training objective is:
 
 $$
-\mathcal{L}_{\mathrm{total}}
-=
-\mathcal{L}_{\mathrm{SUP}}
-+
-\lambda_p\mathcal{L}_{\mathrm{PPC}}
-+
-\lambda_c\mathcal{L}_{\mathrm{COS}}.
+\mathcal{L}_{\mathrm{total}}=\mathcal{L}_{\mathrm{SUP}}+\lambda_p\mathcal{L}_{\mathrm{PPC}}+\lambda_c\mathcal{L}_{\mathrm{COS}}.
 $$
 
 At inference, the foreground probabilities of the two branches are averaged:
